@@ -16,43 +16,21 @@ app.get('/', (req, res) => {
     res.json(data); 
   })
 
-  //TODO:Search 
-  app.get('/search/:id', (req, res) => { 
-    
-
-    try{
-        const moviesID = parseInt(req.params.id)
-      
-        const movie = movies[moviesID - 1]; 
-       
-        
-        if(!movie){ 
-                throw new Error('This movie does not exist')
-        }
-        else{
-             res.send(movie);  
-        }
-    }
-
-
-        catch(err){
-            res.status(404).send({message:err.message})
-        }
-  })
+ 
 
   //Retrieve random search
   app.get('/search/random', (req, res) => { 
   
-    res.json(getRandomQuote(quotes));
+    res.json(getRandomSearch(data));
    
   })
 
 
   //Random helper function
-  function getRandomQuote (arr) {
+  function getRandomSearch (arr) {
   
   let random = Math.floor(Math.random() * arr.length);
-  return quotes[random]
+  return arr[random]
 }
 
 
