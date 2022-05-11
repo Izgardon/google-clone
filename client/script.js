@@ -47,3 +47,13 @@ function googleSearch() {
 }
 
 function apiSearch() {}
+
+lucky.addEventListener("click", feelingLucky);
+
+function feelingLucky() {
+  fetch("http://localhost:3000/search/random")
+    .then((resp) => resp.json())
+    .then((data) => {
+      window.location.replace(data);
+    });
+}
