@@ -1,3 +1,4 @@
+
 let accessKey = "b66dea11ca6dce22d64c88699e872510";
 let query = 'Mcdonalds'; //defined from searchbar 
 
@@ -17,3 +18,7 @@ fetch(url)
 
     data.organic_results
 })
+
+let google = document.querySelector();
+let lucky = document.querySelector;
+
