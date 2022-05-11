@@ -9,16 +9,34 @@
     <title>Google</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <div class="left">
+        <p>About</p>
+        <p>Store</p>
+      </div>
+      <div class="right">
+        <p>Gmail</p>
+
+        <p>Images</p>
+      </div>
+    </header>
     <main>
       <div class="container">
         <div class="logo">
-          <img src="./images/logo.png" alt="Google logo" />
+          <img
+            onClick="location.href='https://www.google.co.uk'"
+            src="./images/logo.png"
+            alt="Google logo"
+          />
         </div>
         <div class="search-bar">
           <div class="magnify"></div>
           <input type="text" placeholder="" />
           <div class="microphone"></div>
+        </div>
+        <div class="btns">
+          <button class="search-btn">Google Search</button>
+          <button class="lucky-btn">I'm Feeling Lucky</button>
         </div>
       </div>
     </main>
