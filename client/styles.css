@@ -1,0 +1,253 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: rgb(81, 81, 81);
+}
+html {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  margin: 1rem;
+  top: 0;
+}
+
+.left {
+  margin-right: auto;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+.right {
+  margin-right: 3rem;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+main {
+  top: 30%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  width: 100vw;
+}
+
+.container {
+  max-width: 800px;
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 80%;
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.logo > img {
+  width: 275px;
+  cursor: pointer;
+}
+
+.search-bar {
+  width: 70%;
+  margin-bottom: 1rem;
+  border-radius: 50px;
+  border: 0.5px solid rgb(204, 204, 204);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar:hover {
+  box-shadow: 0 0 1px darkblue;
+}
+
+.search-bar > input {
+  width: 80%;
+  height: 2.5rem;
+  border: none;
+  font-size: 1.25rem;
+  margin-left: 0.95rem;
+  border: none;
+}
+
+.magnify {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.microphone {
+  height: 30px;
+}
+.microphone > img {
+  height: 100%;
+}
+.magnify > img {
+  height: 100%;
+}
+
+button {
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+  color: rgb(66, 66, 66);
+}
+
+button:hover {
+  box-shadow: 0 0 1px darkblue;
+}
+
+input:focus {
+  outline-width: 0;
+}
+
+.google-switch {
+  position: absolute;
+  left: 2rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+
+  transition: 0.4s;
+}
+
+#switch:checked + .slider {
+  background-color: #2196f3;
+}
+
+#switch:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+#switch:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+footer {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  margin-inline: 1rem;
+  bottom: 0;
+  font-size: 0.9rem;
+  background-color: white;
+  padding-block: 1rem;
+}
+
+.search-results {
+  left: 8%;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 12rem 0 0 6rem;
+}
+
+.url {
+  font-size: 0.85rem;
+  color: rgb(37, 37, 37);
+  margin-bottom: 0.5rem;
+}
+.link {
+  color: blue;
+  font-size: 1.35rem;
+
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: rgb(9, 9, 172);
+}
+.snippet {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.none {
+  display: none;
+}
+
+/* Search result page */
+.container-search {
+  display: flex;
+  position: absolute;
+  top: 4rem;
+  gap: 6rem;
+  left: -2rem;
+}
+
+.logo-search {
+  width: 20px;
+}
+
+.logo-search > img {
+  width: 150px;
+}
+
+.search-bar-search {
+  height: 40px;
+  width: 500px;
+}
+
+.search-bar-search > input {
+  border-top: 0.5px solid rgb(204, 204, 204);
+  border-bottom: 0.5px solid rgb(204, 204, 204);
+}
