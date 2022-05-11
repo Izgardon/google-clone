@@ -57,4 +57,14 @@ None as far as we can tell
 
 ### Wins
 
+- Linked front-end to back-end successfully
+- Linked our own API, as well as Google search API
+- Extracted the right data from the APIs and displayed them on the screen in Google search like format
+- Added functionality to multiple buttons and the enter key to search
+- Add a switch to change between each API
+- Added feeling lucky button that takes us to a random page from our own API
+- Deleted current elements and added new ones on additional button clicks
+
 ### Challenges
+
+- Changing multiple elements to add a new style
