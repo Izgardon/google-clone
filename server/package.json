@@ -1,12 +1,14 @@
 {
-  "name": "server",
+  "name": "index",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
+
     "test": "jest --watchAll",
     "start": "node index.js",
     "coverage": "jest --coverage"
+
   },
   "keywords": [],
   "author": "",
