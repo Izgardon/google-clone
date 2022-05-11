@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color:rgb(81, 81, 81)
 }
 
 body{
@@ -69,11 +70,15 @@ main {
     width:70%;
     margin-bottom: 1rem;
     border-radius: 50px;
-    border:0.5px solid black;
+    /* border:0.5px solid black; */
     display:flex;
     align-items: center;
     justify-content: center;
     
+}
+
+.search-bar:hover{
+    box-shadow: 0 0 1px darkblue;
 }
 
 .search-bar > input {
@@ -86,15 +91,28 @@ main {
 }
 
 button{
-    padding: 0.25rem;
+    padding: 0.5rem;
     border: none;
     cursor: pointer;
     margin-right: 1rem;
     color: rgb(66, 66, 66);
 }
 
+button:hover{
+    box-shadow: 0 0 1px darkblue;
+}
+
 input:focus {
     outline-width: 0;
+}
+
+footer{
+    position: absolute;
+    width: 100vw;
+    display:flex;
+    margin: 1rem;
+    bottom: 0;
+    font-size: 0.9rem;
 }
 
 <div class="container">
