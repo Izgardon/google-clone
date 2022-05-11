@@ -24,7 +24,7 @@ function googleSearch() {
 
     console.log(query);
 
-    /* let url =
+    let url =
     "http://api.serpstack.com/search?access_key=" +
     accessKey +
     "&query=" +
@@ -42,8 +42,26 @@ function googleSearch() {
       });
 
       data.organic_results;
-    }); */
+    }); 
   }
 }
 
-function apiSearch() {}
+function apiSearch() {
+    if (!googleSwitch.checked) {
+
+    fetch('http://localhost:3000/search/')
+    .then((response) => response.json())
+    .then((data) => {
+      
+
+        data.forEach((element) => {
+            console.log(element.title);
+            console.log(element.snippet);
+            console.log(element.url);
+        });
+
+    
+    })
+
+}
+}
