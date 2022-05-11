@@ -2,13 +2,18 @@ const express = require('express');
 const cors = require('cors')
 const app = express();
 const data = require('./data');
+const listEndpoints = require('express-list-endpoints')
 
 app.use(express.json()) 
 app.use(cors()) 
 
 //TODO: Get all Enpoints
 app.get('/', (req, res) => { 
-    res.send('Welcome to our Search API!'); 
+    res.json(listEndpoints(app)); 
+  })
+
+  app.get('/search', (req, res) => { 
+    res.json(data); 
   })
 
   //TODO:Search 
@@ -17,11 +22,11 @@ app.get('/', (req, res) => {
 
     try{
         const moviesID = parseInt(req.params.id)
-       // console.log(req.params.id)
-        const movie = movies[moviesID - 1]; //plus 1 to because of array indexing
+      
+        const movie = movies[moviesID - 1]; 
        
         
-        if(!movie){ // if cat id doesnt exist,add ettot
+        if(!movie){ 
                 throw new Error('This movie does not exist')
         }
         else{
@@ -36,10 +41,10 @@ app.get('/', (req, res) => {
   })
 
   //Retrieve random search
-  app.get('/quotes/random', (req, res) => { 
+  app.get('/search/random', (req, res) => { 
   
     res.json(getRandomQuote(quotes));
-    //res.json(quotes); 
+   
   })
 
 
@@ -51,3 +56,4 @@ app.get('/', (req, res) => {
 }
 
 
+module.exports = app;
